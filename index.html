@@ -25,11 +25,11 @@
 
     .login-container img {
       width: 80px; /* Verkleinertes Instagram-Logo */
-      margin-bottom: 10px;
+      margin-bottom: 5px; /* Logo höher schieben */
     }
 
     .login-container h1 {
-      font-size: 28px; /* Größerer Instagram-Schriftzug */
+      font-size: 30px; /* Größerer Instagram-Schriftzug */
       margin-bottom: 20px;
     }
 
@@ -104,7 +104,7 @@
       text-align: right;
       color: #3897f0;
       font-size: 12px;
-      margin: 8px 0 20px; /* Mehr Abstand zum Anmeldebutton */
+      margin: 8px 0 20px; /* Gleicher Abstand für Links */
       text-decoration: none;
       cursor: pointer;
     }
@@ -122,13 +122,29 @@
       font-size: 16px;
       font-weight: bold;
       width: 100%;
-      margin-top: 20px; /* Button weiter heruntergesetzt */
+      margin-top: 10px; /* Button leicht nach oben verschieben */
       cursor: pointer;
       transition: background-color 0.3s;
     }
 
     .form-container button:hover {
       background-color: #3078d9;
+    }
+
+    .register-container {
+      margin-top: 20px; /* Gleicher Abstand wie Passwort vergessen */
+      font-size: 12px;
+      color: #8e8e8e;
+    }
+
+    .register-container a {
+      color: #3897f0; /* Einheitliches Blau */
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    .register-container a:hover {
+      text-decoration: underline;
     }
 
     .footer {
@@ -152,7 +168,7 @@
       }
 
       .login-container h1 {
-        font-size: 24px; /* Etwas kleinerer Schriftzug auf Handys */
+        font-size: 26px; /* Etwas kleinerer Schriftzug auf Handys */
       }
 
       .facebook-btn {
@@ -200,7 +216,9 @@
     </div>
 
     <!-- Registrierung -->
-    <p>Du hast kein Konto? <a href="#" class="link">Registrieren</a></p>
+    <div class="register-container">
+      <p>Du hast kein Konto? <a href="#">Registrieren</a></p>
+    </div>
   </div>
 
   <!-- Footer -->
