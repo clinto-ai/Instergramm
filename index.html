@@ -36,7 +36,7 @@
     .facebook-btn {
       background-color: #1877f2;
       color: #fff;
-      padding: 10px 0;
+      height: 40px; /* Feste Höhe für Button */
       font-size: 14px;
       font-weight: bold;
       border: none;
@@ -44,12 +44,11 @@
       cursor: pointer;
       margin-bottom: 20px;
       display: flex;
-      align-items: center;
+      align-items: center; /* Logo und Text zentrieren */
       justify-content: center;
       width: 100%; /* Button zentrieren */
       max-width: 280px; /* Maximale Breite */
       transition: background-color 0.3s;
-      position: relative; /* Ermöglicht bessere Ausrichtung */
     }
 
     .facebook-btn:hover {
@@ -57,10 +56,9 @@
     }
 
     .facebook-btn img {
-      position: absolute;
-      left: 12px; /* Logo leicht nach links verschieben */
-      width: 16px;
-      height: 16px;
+      margin-right: 8px; /* Abstand zwischen Logo und Text */
+      width: 20px;
+      height: 20px;
     }
 
     .divider {
@@ -174,7 +172,8 @@
 
       .facebook-btn {
         font-size: 12px;
-        padding: 10px 0;
+        height: 38px; /* Kleinere Höhe für mobile Geräte */
+        justify-content: center;
       }
 
       .form-container input {
